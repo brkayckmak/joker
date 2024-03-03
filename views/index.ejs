@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-zone">
+        <form action="/" method="POST" class="joke-form" id="joke-form">
+          <p>Give me a</p>
+          <select name="jokeCategory" class="form-select">
+            <option value="Any">random</option>
+            <option value="Programming">programming</option>
+            <option value="Dark">dark</option>
+            <option value="Spooky">spooky</option>
+            <option value="Miscellaneous">misc</option>
+            <option value="Pun">pun</option>
+          </select>
+          <select name="jokeType" class="form-select">
+            <option value="single">one part</option>
+            <option value="twopart">two part</option>
+          </select>
+          <p class="last-p">joke!</p>
+          <input type="submit" class="joke-form-submit" value="Send" />
+        </form>
+      </div>
+      <% if (!(locals.joke) && !(locals.setup)){ %>
+      <div class="joker-card">
+        <img src="img/joker.jpg" alt="joker" class="joker" />
+      </div>
+      <% } else { %> <% if (locals.joke){ %>
+      <div class="image-container">
+        <img class="hover-image" src="img/joker.jpg" alt="Your Image" />
+        <div class="image-text">
+          <p><%= joke %></p>
+        </div>
+      </div>
+      <% } else {%>
+      <div class="image-container">
+        <img class="hover-image" src="img/joker.jpg" alt="Your Image" />
+        <div class="image-text">
+          <h2>Q:</h2>
+          <p><%= setup %></p>
+          <h2>A:</h2>
+          <p><%= delivery %></p>
+        </div>
+      </div>
+      <% }} %>
+    </div>
+  </body>
+</html>

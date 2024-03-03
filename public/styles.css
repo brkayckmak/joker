@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+select {
+  appearance: none;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.joke-form {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr;
+  row-gap: 1.2rem;
+  font-size: 1.8rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.form-select {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  color: #1864ab;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.joke-form-submit {
+  grid-column: 1/-1;
+  width: 100%;
+}
+
+.joke-form-submit {
+  font-family: inherit;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25rem 0.5rem;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.joke-form-submit:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+.joker-card {
+  height: 60rem;
+}
+
+.joker {
+  height: 100%;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container:hover .image-text {
+  display: block;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container:hover .hover-image {
+  filter: blur(10px) grayscale(90%); /* Adjust the blur intensity as needed */
+}
+
+.hover-image {
+  height: 60rem;
+  object-fit: cover;
+  transition: filter 0.3s ease; /* Add a smooth transition effect */
+}
+
+.image-text {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  display: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 2rem;
+  background-color: rgba(206, 212, 218, 0.349);
+}
